@@ -29,24 +29,23 @@ import java.util.logging.*;
     	public void conectarServidor() throws IOException
  
     	{
+    		String mensaje = "";
     		 System.out.print("Inicializando servidor... "); 
     		 System.out.println("\t[OK]");  
              idSession = 0;  
              socket = ss.accept();
              dos = new DataOutputStream(socket.getOutputStream());  
              dis = new DataInputStream(socket.getInputStream());  
-             Scanner  sc = new Scanner(System.in); 
-             String mensaje = ""; 
-             System.out.println("- Servidor: " + mensaje); 
-             while (true) {                   
+            
+              
+          //   System.out.println("- Servidor: " + mensaje); 
+             while (true) {      
+            	 Scanner sc = new Scanner (System.in);
             	 //lee
                  System.out.println("- cliente dice "+dis.readUTF()); 
                  //escribe
-                 mensaje = sc.nextLine(); 
-                
+                 mensaje = sc.nextLine();                 
                  dos.writeUTF(mensaje); 
-                
-                 
              }  
     		 
     	}

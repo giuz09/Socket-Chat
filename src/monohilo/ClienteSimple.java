@@ -26,11 +26,10 @@ public class ClienteSimple {
     public void enviarDatos()
     {
     	 try {        
-             String respuesta="";
-             
+             String respuesta="";             
              String mensaje = ""; 
-             //escribe
-           /*  this.getDos().writeUTF(mensaje); 
+             /*   //escribe
+             this.getDos().writeUTF(mensaje); 
              System.out.println("- Cliente: " + mensaje);  
              //lee
              respuesta = this.getDis().readUTF();            
@@ -44,10 +43,6 @@ public class ClienteSimple {
                  //lee
                  respuesta = this.getDis().readUTF();            
                  System.out.println(" Servidor dice: " + respuesta);  
-                 
-                 dos.writeUTF(mensaje); 
-                 System.out.println("- cliente dice "+dis.readUTF()); 
-                 
              			} 
              
                
